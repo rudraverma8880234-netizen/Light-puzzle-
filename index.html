@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07111c">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>LUMEN // HARD PUZZLE</title>
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" aria-label="Lumen light puzzle game"></canvas>
+    <section id="hud">
+      <div class="topbar">
+        <button id="homeBtn" class="icon">⌂</button>
+        <div class="status"><b id="levelLabel">LEVEL 001</b><span id="movesLabel">0 MOVES</span></div>
+        <div class="topActions"><button id="undoBtn" class="icon">↶</button><button id="restartBtn" class="icon">↻</button></div>
+      </div>
+      <div id="objective">Guide every beam to every core.</div>
+      <div id="modePill">DRAG</div>
+      <div id="toast"></div>
+    </section>
+    <section id="home" class="overlay show">
+      <div class="homeCard">
+        <div class="logo">LUMEN<span>//</span>PARADOX</div>
+        <p>EXTREME OPTICAL PUZZLES</p>
+        <button id="playBtn" class="primary">PLAY</button>
+        <button id="continueBtn" class="secondary">CONTINUE</button>
+        <button id="levelsBtn" class="secondary">LEVEL SELECT</button>
+        <small>100 handcrafted deterministic levels • offline PWA</small>
+      </div>
+    </section>
+    <section id="levelPanel" class="overlay">
+      <div class="panel">
+        <button id="closeLevels" class="close">×</button>
+        <h2>LEVELS</h2><div id="levelGrid"></div>
+      </div>
+    </section>
+    <section id="complete" class="overlay">
+      <div class="completeCard">
+        <div class="completeIcon">✦</div><h2>CORE NETWORK STABILIZED</h2>
+        <p id="completeStats"></p>
+        <button id="nextBtn" class="primary">NEXT LEVEL</button>
+        <button id="replayBtn" class="secondary">REPLAY</button>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
